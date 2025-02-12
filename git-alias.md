@@ -10,3 +10,11 @@
   lo = log --oneline
   unstage = 'reset HEAD --'
 ```
+
+また、gitはwindowsではチェックアウト時にLFをCRLFに変換していて、コミット時にCRLFからLFに変換しています。それを防ぐため、以下のコマンドで変更できます。
+
+```
+[core]
+    autocrlf = false
+    eol = lf
+```
